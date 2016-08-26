@@ -16,11 +16,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/search', function () {
-    return '<html><body><h1>serarch</h1><p>this is sample page.</p></body></html>';
-});
-
-
-Route::get('/show', function () {
-    return '<html><body><h1>show</h1><p>this is sample page.</p></body></html>';
-});
+Route::get('/search', 'SearchController@index');
+Route::get('/show', 'SearchController@show');
