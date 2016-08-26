@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Factor;
+use App\Movie;
 use App\Http\Requests;
 
 class SearchController extends Controller
@@ -18,9 +19,11 @@ class SearchController extends Controller
 
     }
 
-    public function show(){
-    	//Model からデータを取得、全件DUMPするコードを記載
-    	return view('show', ['testvalue' => 'show']);
+    public function show($id){
+
+	    $movie = Movie::where('movie_id', $id)->get();
+
+    	return view('show', ['data' => $movie->toArray()]);
 
     }
 }
