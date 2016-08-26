@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 
 Route::get('/search', 'SearchController@index');
+
+// TODO 
+// Routing の所で値を取得する定義を書く
+
 Route::get('/show', 'SearchController@show');
