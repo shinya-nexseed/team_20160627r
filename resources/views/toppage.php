@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form>
+<form action="show.php">
 
 	<h3>どんな映画が見たい？</h3>
 	<select name="factor1">
@@ -24,7 +24,7 @@
 	</select>
 
 	<h4>二人目</h4>
-	<select name="factor2">
+	<select name="factor3">
 		<?php foreach ($factor2 as $key => $value) : ?>
 			<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
 		<?php endforeach; ?>
