@@ -21,4 +21,4 @@ Route::get('/search', 'SearchController@index');
 // TODO 
 // Routing の所で値を取得する定義を書く
 
-Route::get('/show/{id}', 'SearchController@show');
+Route::get('/show{get}', 'SearchController@show');
