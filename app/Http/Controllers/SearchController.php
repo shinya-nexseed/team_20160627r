@@ -49,7 +49,7 @@ class SearchController extends Controller
 
     		if($value['factor2_2'] == $fact2){
     			if($value['factor2_1'] == $fact3){
-    				$movies[] = $value;    				
+    				$movies[] = $value;
     			}
     		}
     	}
