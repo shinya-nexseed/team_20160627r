@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Factor;
 use App\Movie;
+use App\Review;
 use App\Http\Requests;
 
 class SearchController extends Controller
@@ -58,7 +59,10 @@ class SearchController extends Controller
     	$movie = $movies[rand(0,count($movies)-1)];
 
 
-    	return view('show', ['data' => $movie]);
+        // レビューコメントを取得
+        $reviews = Review::where('movie_id',1)->get()->toArray();
+
+    	return view('show', ['movie' => $movie],['reviews' => $reviews]);
 
     }
 }

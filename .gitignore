@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 /public/storage
+/config/database.php
 composer.lock
 Homestead.yaml
 Homestead.json
