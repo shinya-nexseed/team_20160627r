@@ -26,7 +26,7 @@ class SearchController extends Controller
 
     	$fact1 = $_GET['factor1'];
     	$fact2 = $_GET['factor2'];
-    	$fact3 = $_GET['factor3'];
+    	$fact3 = 20;
 
     	// 検索条件に合わせて、ランダムな1件を抽出
 	    // (1) factor1 にマッチするデータを取得
@@ -60,7 +60,7 @@ class SearchController extends Controller
 
 
         // レビューコメントを取得
-        $reviews = Review::where('movie_id',1)->get()->toArray();
+        $reviews = Review::where('movie_id',$movie['movie_id'])->get()->toArray();
 
     	return view('show', ['movie' => $movie],['reviews' => $reviews]);
 

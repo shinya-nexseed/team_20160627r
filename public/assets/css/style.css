@@ -12,7 +12,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
-  font-family: Raleway, "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+  font-family: Raleway, "Noto Sans Japanese Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -47,7 +47,10 @@ h1 h2 h3 h4 p{
 }
 @media(max-width:480px){
   .site-title{
-    font-size: 12px;
+    font-size: 30px;
+  }
+  .site-title-sub{
+    font-size: 20px;
   }
 }
 .site-descripction{
@@ -59,6 +62,7 @@ h1 h2 h3 h4 p{
   display: inline-block;
   width: 200px;
   padding: 20px;
+  margin-top: 50px;
   border-radius: 4px;
   background-color: #afa58d;
   color: #FFF;
@@ -67,13 +71,12 @@ h1 h2 h3 h4 p{
   font-size: 1.2rem;
 }
 .button:hover{
-  opacity: 0.9;
 }
 .button-showy{
   background-color: #f1b400;
 }
 .buttons .button{
-  margin: 20px;
+  margin: 60px;
   padding: 20px;
 }
 .about{
@@ -256,15 +259,17 @@ h1 h2 h3 h4 p{
   display: table;
   width: 80%;
   margin: 50px auto 0;
+  clear: both;
   table-layout: fixed;
+  text-align: left;
 }
 .review-box {
   display: table-cell;
-  clear: both;
-  width: 30%;
+  width: 100%;
   float: left;
   background-color: #CCCCCC;
   box-pack:center;
+  padding: 10px;
   -webkit-box-pack:center;
   -moz-box-pack:center;
 }
@@ -274,6 +279,73 @@ h1 h2 h3 h4 p{
   font-size: 2rem;
   line-height: 2;
 }
+
+.review_post{
+
+}
+
+.review-post{
+  padding: 80px 0 150px;
+}
+.review-post-form{
+  width: 50%;
+  margin: 50px auto 0;
+}
+.review-post-form textarea{
+  height: 150px;
+}
+.review-post-form input[type=text],
+.review-post-form textarea{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 0;
+  background-color: rgba(255,255,255,0.05);
+  color: #FFF;
+}
+.review-post^form textarea{
+  height: 150px;
+}
+.review-post-form input[type=submit]{
+  display: block;
+  width: 200px;
+  margin: 40px auto 0;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+.review-post-form input[type=submit]:hover{
+  background-color: rgba(255,255,255,0.05);
+}
+.review-post-form input[type=text]:focus,
+.review-post-form textarea:focus{
+  box-shadow: 0 0 8px rgba(255,255,255,0.5) inset;
+}
+
+/*for Chrome and Safari */
+.review-post-form ::-webkit-input-placeholder{
+  color: rgba(255,255,255,0.6);
+  opacity: 1;
+}
+
+/*for Internet Explore */
+.review-post-form ::-ms-input-placeholder{
+  color: rgba(255,255,255,0.6);
+  opacity: 1;
+}
+
+/*for foirefox i*/
+.review-post-form ::-moz-input-placeholder{
+  color: rgba(255,255,255,0.8);
+  opacity: 1;
+}
+
 
 .footer{
   padding: 12px 0;

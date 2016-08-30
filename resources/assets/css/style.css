@@ -254,14 +254,14 @@ h1 h2 h3 h4 p{
 }
 .reviews-wrapper{
   display: table;
-  width: 80%;
+  width: 100%;
   margin: 50px auto 0;
   table-layout: fixed;
 }
 .review-box {
   display: table-cell;
   clear: both;
-  width: 30%;
+  width: 100%;
   float: left;
   background-color: #CCCCCC;
   box-pack:center;
