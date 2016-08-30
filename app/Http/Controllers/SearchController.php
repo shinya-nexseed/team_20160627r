@@ -60,7 +60,7 @@ class SearchController extends Controller
 
 
         // レビューコメントを取得
-        $reviews = Review::where('movie_id',1)->get()->toArray();
+        $reviews = Review::where('movie_id',$movie['movie_id'])->get()->toArray();
 
     	return view('show', ['movie' => $movie],['reviews' => $reviews]);
 
