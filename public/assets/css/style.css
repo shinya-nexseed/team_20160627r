@@ -18,8 +18,13 @@ body {
   box-sizing: border-box;
 }
 
-h1 h2 h3 h4 p{
+h1 h2 h3 h4 {
   clear: both;
+}
+
+span{
+  margin: 10px;
+  font-size: 2rem;
 }
 
 .control-label{
@@ -68,8 +73,8 @@ h1 h2 h3 h4 p{
   width: 200px;
   padding: 20px;
   margin-top: 50px;
-  border-radius: 4px;
-  background-color: #afa58d;
+  border-radius: 40px;
+  background-color: #0084B4;
   color: #FFF;
   text-decoration: none;
   letter-spacing: 1px;
@@ -81,7 +86,7 @@ h1 h2 h3 h4 p{
   background-color: #f1b400;
 }
 .buttons .button{
-  margin: 60px;
+  margin: 30px;
   padding: 20px;
 }
 .about{
@@ -113,87 +118,10 @@ h1 h2 h3 h4 p{
   margin: 30px 0;
   line-height: 2.5;
 }
-.works{
-  padding: 80px 0;
-}
-.works-wrapper{
-  display: table;
-  width: 100%;
-  margin-top: 60px;
-  table-layout: fixed;
-}
-.work-box{
-  position: relative;
-  display: table-cell;
-}
-.work-box::after{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: no-repeat;
-  background-size: 100% 100%;
-  opacity: 0.2;
-  -webkit-transform: scaleY(-1);
-     -moz-transform: scaleY(-1);
-      -ms-transform: scaleY(-1);
-       -o-transform: scaleY(-1);
-          transform: scaleY(-1);
-}
-.work-box.tree::after{
-  background-image: url(../images/tree.jpg);
-}
-.work-box.building::after{
-  background-image: url(../images/building.jpg);
-}
-.work-box.lake::after{
-  background-image: url(../images/lake.jpg);
-}
-.work-box.sky::after{
-  background-image: url(../images/sky.jpg);
-}
-.recomend-image{
-  display: block;
-  width: 100%;
-  padding: 100px 300px ;
-}
-.work-box:nth-child(odd) .work-image{
-  margin: 60% 0 0;
-}
-.work-box:nth-child(odd) .work-description,
-.work-box:nth-child(odd)::after{
-  top: 0;
-}
-.work-description{
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  width: 100%;
-  height: 50%;
-  overflow-y: auto;
-}
-.work-description-inner{
-  display: table;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-}
-.work-text{
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 1.2rem;
-  line-height: 2;
-}
-.work-text .button{
-  width: 60%;
-  margin-top: 20px;
-  padding: 3px;
-}
-.button-ghost{
-  border: 1px solid #fff;
-  background-color: rgba(255,255,255,0.15);
+
+.movie-info {
+text-align: left;
+margin: 60px;
 }
 
 .pt20{
@@ -316,10 +244,13 @@ select::-ms-expand {
 }
 
 .recomend-image{
-  padding: 50px 20%;
+  display: block;
   float: left;
-  width: 300px;
-  padding: 20px 00px;
+  width: 100%;
+  margin: auto;
+}
+
+.images{
   margin: 50px;
 }
 

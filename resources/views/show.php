@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <!--レスポンシブ-->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.css">
   <link rel="stylesheet" href="print.css" media="print">
   <title>映画探し|ふたりでなにみる？</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
@@ -19,29 +20,34 @@
   <section class="movie">
     <div class="container">
       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-xs-8 col-xs-offset-2">
           <div class="recomend-description">
-            <img class="images" src="../assets/images/sample.jpeg" alt="sample1">
-            <div class="description">
-              <h1 class="title"><?php echo $movie['title']; ?></h1>
-              <p class="year"><?php echo $movie['release_day']; ?></p>
-              <p class="cast"><?php echo $movie['cast']; ?></p>
-              <p class="age"><?php echo $movie['age_regulation']; ?></p>
-              <h2 class="info">作品情報</h2>
-                <p class="description"><?php echo $movie['introduce']; ?></p>
+            <div class="row">
+
+              <div class="col-xs-4">
+                <div class="recomend-image">
+                 <img class="images" src="../assets/images/sample.jpeg" alt="sample1">
+                </div>
+              </div>
+
+              <div class="col-xs-8">
+                <div class="movie-info">
+                  <h1 class="title"><?php echo $movie['title']; ?></h1>
+                  <span class="year"><?php echo $movie['release_day']; ?></span>
+                  <span class="cast"><?php echo $movie['cast']; ?></span>
+                  <span class="age"><?php echo $movie['age_regulation']; ?></span>
+                  <h2 class="info">作品情報</h2>
+                  <p class="content"><?php echo $movie['introduce']; ?></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-2 col-xs-offset-5">
-          <div class="buttons">
-            <a class="button button-showy" href="#contact">検索</a>
-          </div>
-        </div>
+      <div class="buttons">
+        <a class="button button-showy" href="#">トップへ戻る</a>
       </div>
     </div>
   </section>
@@ -76,5 +82,6 @@
     © ふたりでなにみる？
   </footer>
   <script src="lib/placeholders.min.js"></script>
+
 </body>
 </html>

@@ -37,7 +37,6 @@
         </div>
       </div>
 
-    <div class="mood">
       <div class="container pt20">
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-sm-offset-4">
@@ -51,8 +50,7 @@
                   </select>
                 </div>
               </div>
-             </div>
-           </div>
+            </div>
           </div>
         </div>
 
