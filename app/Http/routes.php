@@ -20,4 +20,5 @@ Route::get('/show{get}', 'SearchController@show');
 Route::get('/moviepost', 'MovieController@create');
 
 
-Route::get('/itunes', 'ItunesController@fetch');
+Route::get('/createMovie', 'UploadController@fetch');
+Route::post('/createMovieCheck', 'UploadController@postCheck');
