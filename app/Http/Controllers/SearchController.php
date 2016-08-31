@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Factor;
 use App\Movie;
+use App\Review;
 use App\Http\Requests;
 
 class SearchController extends Controller
@@ -25,7 +26,7 @@ class SearchController extends Controller
 
     	$fact1 = $_GET['factor1'];
     	$fact2 = $_GET['factor2'];
-    	$fact3 = $_GET['factor3'];
+    	$fact3 = 20;
 
     	// 検索条件に合わせて、ランダムな1件を抽出
 	    // (1) factor1 にマッチするデータを取得
@@ -49,7 +50,7 @@ class SearchController extends Controller
 
     		if($value['factor2_2'] == $fact2){
     			if($value['factor2_1'] == $fact3){
-    				$movies[] = $value;    				
+    				$movies[] = $value;
     			}
     		}
     	}
@@ -58,7 +59,10 @@ class SearchController extends Controller
     	$movie = $movies[rand(0,count($movies)-1)];
 
 
-    	return view('show', ['data' => $movie]);
+        // レビューコメントを取得
+        $reviews = Review::where('movie_id',$movie['movie_id'])->get()->toArray();
+
+    	return view('show', ['movie' => $movie],['reviews' => $reviews]);
 
     }
 }

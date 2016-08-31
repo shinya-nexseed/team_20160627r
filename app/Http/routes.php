@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::get('/search', 'SearchController@index');
 
-// TODO 
-// Routing の所で値を取得する定義を書く
 
 Route::get('/show{get}', 'SearchController@show');
+
+
+Route::get('/moviepost', 'MovieController@create');
+
+
+Route::get('/itunes', 'ItunesController@fetch');
