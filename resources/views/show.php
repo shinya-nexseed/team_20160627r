@@ -26,7 +26,7 @@
 
               <div class="col-xs-4">
                 <div class="recomend-image">
-                 <img class="images" src="../assets/images/sample.jpeg" alt="sample1">
+                 <img class="images" src="<?php echo $movie['image']; ?>" width="189px" height="267px" alt="sample1">
                 </div>
               </div>
 
