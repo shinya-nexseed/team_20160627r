@@ -20,26 +20,43 @@
     <h1 class="site-title">ふたりでなにみる？</h1>
 
     <form action="show.php">
-    <div class="geners">
-      <h1>ジャンルは？</h1>
-      <label for="category" class="select-wrap entypo-down-open-mini">
-        <select name="factor1" id="category">
-          <?php foreach ($factor1 as $key => $value) : ?>
-            <option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
-          <?php endforeach; ?>
-        </SELECT>
-      </label>
-    </div>
+      <div class="container pt20">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+            <div class="form-group">
+            <label class="control-label">ジャンルは？</label>
+            <div class="select-wrap select-circle">
+              <select name="factor1" id="category">
+                <?php foreach ($factor1 as $key => $value) : ?>
+                  <option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
 
     <div class="mood">
-      <h1>どんな気分？</h1>
-      <label for="category" class="select-wrap entypo-down-open-mini">
-        <select name="factor2" id="category">
-          <?php foreach ($factor2 as $key => $value) : ?>
-            <option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
-          <?php endforeach; ?>
-        </SELECT>
-      </label>
+      <div class="container pt20">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+            <div class="form-group">
+              <label class="control-label">ジャンルは？</label>
+                <div class="select-wrap select-circle">
+                  <select name="factor2" id="category">
+                    <?php foreach ($factor2 as $key => $value) : ?>
+                      <option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
+              </div>
+             </div>
+           </div>
+          </div>
+        </div>
+
+
     <div class="buttons">
       <input type="submit" value="検索する" class="button">
     </div>
