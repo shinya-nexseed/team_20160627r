@@ -22,3 +22,4 @@ Route::get('/moviepost', 'MovieController@create');
 
 Route::get('/createMovie', 'UploadController@fetch');
 Route::post('/createMovieCheck', 'UploadController@postCheck');
+Route::post('/createMovieSubmit', 'UploadController@store');

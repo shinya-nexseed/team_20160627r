@@ -24,14 +24,30 @@
 	<?php  echo $_POST['age_regulation'] ?>
 	<br><br>
 
-	<p>ジャンル</p>
+	<p>ジャンル(1)</p>
 	<?php foreach ($factor1 as $key => $value) : ?>
-		<?php if ($value['factor_id'] == $_POST['factor1']): ?>
+		<?php if ($value['factor_id'] == $_POST['factor1_1']): ?>
 			<?php echo $value['factor']; ?>
 		<?php endif; ?>
 	<?php endforeach; ?>
-
 	<br><br>
+
+	<p>ジャンル(2)</p>
+	<?php foreach ($factor1 as $key => $value) : ?>
+		<?php if ($value['factor_id'] == $_POST['factor1_2']): ?>
+			<?php echo $value['factor']; ?>
+		<?php endif; ?>
+	<?php endforeach; ?>
+	<br><br>
+
+	<p>ジャンル(3)</p>
+	<?php foreach ($factor1 as $key => $value) : ?>
+		<?php if ($value['factor_id'] == $_POST['factor1_3']): ?>
+			<?php echo $value['factor']; ?>
+		<?php endif; ?>
+	<?php endforeach; ?>
+	<br><br>
+
 
 	<p>気分</p>
 	<?php foreach ($factor2 as $key => $value) : ?>
@@ -42,15 +58,10 @@
 
 	<br><br>
 
-	<p>一言コメント</p>
-	<?php  echo $_POST['comment'] ?>
-	<br><br>
-
-
 	
 <form method="post" action="/createMovieSubmit">
 
-	<input name="_token" type="hidden" value="<?php csrf_token(); ?>"> 
+	<input name="_token" type="hidden" value="{{csrf_token()}}"> 
 
 	<input type="hidden" name="image" value="<?php echo $_POST['image']?>">
 	<input type="hidden" name="movie_title"  value="<?php  echo htmlspecialchars($_POST['movie_title']) ?>">
@@ -58,7 +69,9 @@
 	<input type="hidden" name="cast" value="<?php  echo htmlspecialchars($_POST['cast']) ?>">
 	<input type="hidden" name="release_day" value="<?php  echo htmlspecialchars($_POST['release_day']) ?>">
 	<input type="hidden" name="age_regulation" value="<?php  echo htmlspecialchars($_POST['age_regulation']) ?>">
-	<input type="hidden" name="factor1" value="<?php  echo $_POST['factor1'] ?>">
+	<input type="hidden" name="factor1_1" value="<?php  echo $_POST['factor1_1'] ?>">
+	<input type="hidden" name="factor1_2" value="<?php  echo $_POST['factor1_2'] ?>">
+	<input type="hidden" name="factor1_3" value="<?php  echo $_POST['factor1_3'] ?>">
 	<input type="hidden" name="factor2" value="<?php  echo $_POST['factor2'] ?>">
 
 	<input type="submit" value="登録">

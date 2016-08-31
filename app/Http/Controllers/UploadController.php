@@ -8,6 +8,8 @@ use App\Factor;
 use App\Movie;
 use App\Review;
 use App\Http\Requests;
+use Carbon\Carbon;
+
 
 class UploadController extends Controller
 {
@@ -62,23 +64,30 @@ class UploadController extends Controller
 	}
 
 
-	public function postIndex(){
+	public function store(Request $request){
 
-	  // アップロード画像を取得
-	  $image = Input::file('image');
-	 
-	  // ファイル名を生成し画像をアップロード
-	  $name = md5(sha1(uniqid(mt_rand(), true))).'.'.$image->getClientOriginalExtension();
-	  $upload = $image->move('media', $name);
-	 
-	  // アップロード成功のメッセージを定義
-	  $data = array(
-	    'success' => '画像がアップロードされました',
-	  );
-	 
-	  // メッセージをセッションに格納しリダイレクト
-	  return Redirect::to(URL::to('/movieCreate'))
-	    ->with($data);
+        //make movie object
+        $movie = Movie::create();
+
+		$movie->user_id = 1;
+		$movie->created = Carbon::now();
+		$movie->modified = Carbon::now();
+
+		$movie->image = $request->image;
+		$movie->title = $request->movie_title;
+		$movie->introduce = $request->introduce;
+		$movie->cast = $request->cast;
+		$movie->release_day = $request->release_day;
+		$movie->age_regulation = $request->age_regulation;
+		$movie->factor1_1 = $request->factor1_1;
+		$movie->factor1_2 = $request->factor1_2;
+		$movie->factor1_3 = $request->factor1_3;
+		$movie->factor2_1 = $request->factor2;
+
+        $movie->save();
+
+        echo "投稿に成功しました";
+
 	}
 
 

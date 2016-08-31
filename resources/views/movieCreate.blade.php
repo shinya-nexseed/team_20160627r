@@ -40,8 +40,24 @@
 			<br><input type="text" name="age_regulation" size="40" value="<?php echo $data['contentAdvisoryRating']?>">
 		</p>
 		
-		<p>ジャンルは？</p>
-        <select name="factor1" id="category">
+		<p>１つ目のジャンルは？</p>
+        <select name="factor1_1" id="category">
+			<?php foreach ($factor1 as $key => $value) : ?>
+				<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
+			<?php endforeach; ?>
+		</select>
+
+		<p>２つ目のジャンルは？</p>
+        <select name="factor1_2" id="category">
+		<option value="NULL">NULL</option>
+			<?php foreach ($factor1 as $key => $value) : ?>
+				<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
+			<?php endforeach; ?>
+		</select>
+
+		<p>３つ目のジャンルは？</p>
+        <select name="factor1_3" id="category">
+		<option value="NULL">NULL</option>
 			<?php foreach ($factor1 as $key => $value) : ?>
 				<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
 			<?php endforeach; ?>
@@ -53,11 +69,6 @@
 				<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
 			<?php endforeach; ?>
 		</select>
-
-		<p>一言コメント
-			<br><textarea name="comment" rows="2" cols="80"></textarea>
-		</p>
-
 
 		<br>
 		<br>
@@ -103,8 +114,24 @@
 		<br><input type="text" name="age_regulation" size="40">
 	</p>
 
-	<p>ジャンルは？</p>
-    <select name="factor1" id="category">
+	<p>１つ目のジャンルは？</p>
+    <select name="factor1_1" id="category">
+		<?php foreach ($factor1 as $key => $value) : ?>
+			<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
+		<?php endforeach; ?>
+	</select>
+
+	<p>２つ目のジャンルは？</p>
+    <select name="factor1_2" id="category">
+		<option value="NULL">NULL</option>
+		<?php foreach ($factor1 as $key => $value) : ?>
+			<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
+		<?php endforeach; ?>
+	</select>
+
+	<p>３つ目のジャンルは？</p>
+    <select name="factor1_3" id="category">
+		<option value="NULL">NULL</option>
 		<?php foreach ($factor1 as $key => $value) : ?>
 			<option value="<?php echo $value['factor_id']; ?>"><?php echo $value['factor']; ?></option>
 		<?php endforeach; ?>
